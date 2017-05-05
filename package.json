@@ -1,0 +1,11 @@
+{
+  "name": "DcardIntern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "koa": "^2.2.0",
+    "mysql": "^2.13.0"
+  }
+}
