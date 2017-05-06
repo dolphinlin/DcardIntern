@@ -37,11 +37,11 @@ const v2 = [
 ]
 
 const v3 = [
-  { arrival: 0, departure: 2 },
-  { arrival: 14, departure: 30 },
-  { arrival: 18, departure: 32 },
-  { arrival: 9, departure: 29 },
-  { arrival: 17, departure: 25 }
+  { arrival: 2, departure: 7 },
+  { arrival: 19, departure: 38 },
+  { arrival: 13, departure: 16 },
+  { arrival: 15, departure: 32 },
+  { arrival: 14, departure: 16 }
 ]
 
 

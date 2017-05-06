@@ -27,10 +27,14 @@ describe('Visitor maximum', () => {
       assert.equal(calmax(mockVisitor.v1, 1, 1), 1)
       done()
     });
-    it('random test 5 - 10', (done) => {
-      const randomData = mockVisitor.createRandom(5)
+    it('should turn 1 => 5 - 10', (done) => {
+      assert.equal(calmax(mockVisitor.v3, 5, 10), 1)
+      done()
+    });
+    it('random test 15 - 20', (done) => {
+      const randomData = mockVisitor.createRandom(30)
       console.log(randomData);
-      console.log(`maximum => ${calmax(randomData, 5, 10)}`)
+      console.log(`maximum => ${calmax(randomData, 15, 20)}`)
       done()
     });
   });
