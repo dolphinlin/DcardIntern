@@ -16,14 +16,24 @@
   <div id="app">
     <h1>TodoList - {{newTodo}}</h1>
     <input type="text" v-model="newTodo" @keyup.enter="addItem">
-
+    <div class="filterBtn">
+      <button @click="changeFilter('all')">All</button>
+      <button @click="changeFilter('completed')">Complete</button>
+      <button @click="changeFilter('uncomplete')">Uncomplete</button>
+    </div>
     <ul>
-      <li v-for="i in todos" :key="i.id" :class="{completed: i.complete}">
+      <li v-for="i in todosFilter" :key="i.id" :class="{completed: i.complete}" @dblclick="editTodo(i)">
         <input type="checkbox" v-model="i.complete">
         <label>{{i.name}}</label>
         <button type="button" @click="removeTodo(i)">Delete</button>
       </li>
     </ul>
+    <div>
+      <button @click="clear">Clear</button>
+    </div>
+    <div v-show="editable">
+      <input type="text" v-model="editObject.name" @keyup.enter="completeEdit">
+    </div>
   </div>
 
   <script src="./main.js"></script>
