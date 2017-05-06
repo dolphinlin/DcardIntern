@@ -14,7 +14,7 @@ function calMax(vs, startTime, endTime) {
       maxTime = 0
   for (let i = 0; i < p.length; i++ ) {
     const tmpTime = (p[i].arrival > startTime ? startTime : p[i].arrival)
-    // let tmpMax = 0
+    if (lastStartTime === tmpTime) continue
     for (let time = tmpTime; time <= p[i].departure; time++ ) {
       let tmpMax = p.filter(v => v.arrival <= time && v.departure >= time).length
       if (tmpMax > max) {
@@ -22,6 +22,7 @@ function calMax(vs, startTime, endTime) {
         maxTime = time
       }
     }
+    lastStartTime = tmpTime
   }
   console.log(`Max in => ${maxTime}`)
   return max
